@@ -9,14 +9,14 @@ import { Console } from "console";
 
 export const Top = ({className, arr,  ...props}: TopProps) => {
     return(
-        <div className= {cn(styles.navbar, className)} {...props}>
+        <div className= {cn(styles.container, className)} {...props}>
             <Container fluid>
                 <div>
                     <Row>
                     <h2>Top:</h2>
                 </Row>
                 {arr[0].map((e, i) =>{
-                    return (<div key={i}>
+                    return (<div key={i} className = {styles.book}>
                         <Row>
                         <img src = {e.Src ? e.Src : "blank.png"} alt = "None" width = {"100px"}></img>
                         </Row>

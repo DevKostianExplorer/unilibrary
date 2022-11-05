@@ -90,9 +90,9 @@ const [selectedOptions, setSelectedOptions] = useState<MultiValue<GenreOption>>(
 
 return(
     <div className= {cn(styles.navbar, className)} {...props}>
-        <Container fluid>
-            <h2>Genre:</h2>
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+          <div className={styles.filter}>
+          <h2 className = {styles.heading}>Genre:</h2>
             <Select
                 closeMenuOnSelect={false}
                 defaultValue={[]}
@@ -101,10 +101,11 @@ return(
                 styles={colourStyles}
                 onChange = {handleChange}
             />
-            <input className = {cn(styles.button,styles.signup)} type={"submit"}></input>
+          </div>
+
+            <input className = {cn(styles.button,styles.signup)} type={"submit"} value = {"Search"}></input>
 
         </form>
-        </Container>
 
     </div>
 )
