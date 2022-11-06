@@ -1,0 +1,80 @@
+.div {
+	display: grid;
+    grid-template-columns: 1fr 20%;
+
+	width: 328px;
+	height: 70px;
+	padding: 15px 20px;
+
+	border-radius: 5px;
+	background: #F7F7F7;
+}
+
+.label{
+	grid-column: 1/-1;
+}
+
+.input {
+	border:none;
+	outline:none;
+    grid-column: 1/2; 	
+	background: #F7F7F7;
+	font-family: var(--font-family-montserrat);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: #ADACAC;
+}
+
+
+.icon {
+	grid-column: 2/3;
+	align-self: center;
+	justify-self: center;
+}
+
+.line {
+	grid-column: 1/-1;
+	width: 328px;
+}
+
+.arrow {
+	grid-column: 2/3;
+	align-self: center;
+	justify-self: center;
+	background: none;
+	border:none;
+}
+
+.rotate {
+	transform: rotate(180deg);
+}
+
+.div:hover .line {
+	fill: #1B1A1A;
+}
+
+.err .line{
+	fill: #C80000;
+
+}
+
+.correct .line{
+	fill: #27AE60;
+
+}
+
+.errorMessage {
+	color:#C80000;
+	opacity: 0.87;
+	font-family: var(--font-family-montserrat);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.editted {
+	color: #333333;;
+}

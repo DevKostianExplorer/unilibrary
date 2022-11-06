@@ -3,6 +3,7 @@ import { BookElementProps } from "./BookElement.props";
 import styles from './BookElement.module.css';
 import cn from 'classnames';
 import { Container, Row, Col } from "react-grid-system";
+import Star from "./Star.svg"
 
 export const BookElement = ({className, Book,  ...props}: BookElementProps) => {
     return(
@@ -11,6 +12,7 @@ export const BookElement = ({className, Book,  ...props}: BookElementProps) => {
                 <Row className= {cn(styles.bookelement, className)}>
                     <Col md ={2} className = {styles.img}  >
                         <img src = {Book.Src ? Book.Src : "blank.png"} alt = "None" width = {"100px"}></img>
+                        
                     </Col>
                     <Col md ={7} className = {styles.text}  >
                         <Row className = {styles.title} >

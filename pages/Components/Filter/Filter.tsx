@@ -10,6 +10,7 @@ import chroma from 'chroma-js';
 
 import { GenreOption, genreOptions } from './data';
 import Select, { MultiValue, StylesConfig } from 'react-select';
+import { SubmitButton } from "../SubmitButton/SubmitButton";
 
 const colourStyles: StylesConfig<GenreOption, true> = {
   control: (styles) => ({ ...styles, backgroundColor: 'white' }),
@@ -103,7 +104,7 @@ return(
             />
           </div>
 
-            <input className = {cn(styles.button,styles.signup)} type={"submit"} value = {"Search"}></input>
+            <SubmitButton value= "Search" />
 
         </form>
 
